@@ -134,15 +134,18 @@ class ViewController: UIViewController {
     
     func setUp() {
         for i in 0...9 {
+            println("break point 1")
             ans.append(i)
         }
         for i in 0...9 {
+            println("break point 2")
             let random = Int(arc4random_uniform(UInt32(10)))
             var tepm = ans[random]
             ans[random] = ans[i]
             ans[i] = tepm
         }
         for d in 0...3 {
+            println("break point 3")
             ansPrint[d] = ans[d]
             println(ansPrint[d])
         }
